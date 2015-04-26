@@ -2,6 +2,8 @@
 SET (TEST_SRCS 
     AllTest.cc
     Logger_test.cc
+    Atomic_test.cc
+    Util_test.cc
 )
 
 ADD_EXECUTABLE (all_test ${TEST_SRCS})

@@ -14,8 +14,6 @@
  *
  */
 
-
-#include <climits>
 #include <gtest/gtest.h>
 
 #include "socx/util/Logger.h"
