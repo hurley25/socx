@@ -25,6 +25,8 @@
 #include <thread>
 #include <condition_variable>
 
+#include <assert.h>
+
 #include "socx/util/noncopyable.h"
 
 namespace socx {
@@ -35,20 +37,28 @@ namespace util {
  */
 class ThreadPool : private noncopyable
 {
-typedef std::function<void ()> Task;
+    /// 线程池回调定义
+    typedef std::function<void ()> Task;
 
 public:
-    explicit ThreadPool(size_t threadNums, std::string name = std::string("ThreadPool"));
+    /// 线程池构造
+    explicit ThreadPool(const std::string &name = std::string());
     ~ThreadPool();
 
     /// 启动线程池
-    void start();
+    void start(int threadNums);
 
     /// 结束线程池
     void stop();
 
     /// 线程池添加任务
     void putTask(Task task);
+
+    /// 设置线程池初始化回调
+    void setThreadPoolInitCallback(Task callback)
+    {
+        threadInitCallback_ = callback;
+    }
 
     /// 设置任务队列最大长度
     void setMaxQueueSize(size_t maxSize)
@@ -64,24 +74,29 @@ public:
         return queue_.size();
     }
 
-    const std::string &name() const
+private:
+    bool isFull() const
     {
-        return name_;
+        assert(!mutex_.try_lock());
+        return maxQueueSize_ > 0 && queue_.size() >= maxQueueSize_;
     }
 
+    Task take();
+
+    void threadFunc();
+
 private:
-    bool shutdown_;
     std::string name_;
-    size_t threadNums_;
-    std::vector<std::thread> threads_;
+    size_t maxQueueSize_;
+    bool running_;
 
     mutable std::mutex mutex_;
     std::condition_variable notFullCond_;
     std::condition_variable notEmptyCond_;
-    size_t maxQueueSize_;
-    std::deque<Task> queue_;
 
-    void threadFunc();
+    Task threadInitCallback_;
+    std::vector<std::thread*> threads_;
+    std::deque<Task> queue_;
 };
 
 } // namespace util
