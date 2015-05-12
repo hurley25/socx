@@ -5,8 +5,9 @@ SET (TEST_SRCS
     Atomic_test.cc
     Util_test.cc
     BlockingQueue_test.cc
+    ThreadPool_test.cc
 )
 
 ADD_EXECUTABLE (all_test ${TEST_SRCS})
-TARGET_LINK_LIBRARIES (all_test glog gtest pthread)
+TARGET_LINK_LIBRARIES (all_test glog gtest pthread socx_util)
 
