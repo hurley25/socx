@@ -23,7 +23,7 @@
 
 using namespace socx;
 
-util::AtomicInt32 count;
+static util::AtomicInt32 count;
 
 void test_task(int num)
 {

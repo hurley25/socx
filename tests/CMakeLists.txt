@@ -6,6 +6,7 @@ SET (TEST_SRCS
     Util_test.cc
     BlockingQueue_test.cc
     ThreadPool_test.cc
+    CountDownLatch_test.cc
 )
 
 ADD_EXECUTABLE (all_test ${TEST_SRCS})
