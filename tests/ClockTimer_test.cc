@@ -5,7 +5,7 @@
  * it under the terms of the GNU General Public License version 2 as
  * published by the Free Software Foundation.
  *
- * Atomic_test.cc -- test class Atomic*
+ * ClockTimer_test.cc -- test class ClockTimer
  *
  * Version: 1.0  12/12/2015 12:59:56 PM
  *

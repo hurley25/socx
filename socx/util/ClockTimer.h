@@ -18,6 +18,8 @@
 
 #include <time.h>
 
+#include "socx/util/Logger.h"
+
 namespace socx {
 
 class ClockTimer
@@ -33,21 +35,24 @@ public:
     static uint64_t nowNs()
     {
         struct timespec tv;
-        clock_gettime(CLOCK_REALTIME, &tv);
+        int ret = clock_gettime(CLOCK_REALTIME, &tv);
+        CHECK(ret != -1) << "clock_gettime error, errno: " << errno << " msg:" << strerror(errno);
         return (tv.tv_sec * (uint64_t)1000000000 + tv.tv_nsec);
     }
 
     static uint64_t nowUs()
     {
         struct timespec tv;
-        clock_gettime(CLOCK_REALTIME, &tv);
+        int ret = clock_gettime(CLOCK_REALTIME, &tv);
+        CHECK(ret != -1) << "clock_gettime error, errno: " << errno << " msg:" << strerror(errno);
         return (tv.tv_sec * (uint64_t)1000000 + tv.tv_nsec / 1000);
     }
 
     static uint64_t nowMs()
     {
         struct timespec tv;
-        clock_gettime(CLOCK_REALTIME, &tv);
+        int ret = clock_gettime(CLOCK_REALTIME, &tv);
+        CHECK(ret != -1) << "clock_gettime error, errno: " << errno << " msg:" << strerror(errno);
         return (tv.tv_sec * (uint64_t)1000 + tv.tv_nsec / 1000000);
     }
 };

@@ -7,7 +7,7 @@
  *
  * BlockingQueue_test.cc -- test class BlockingQueue
  *
- * Version: 1.0  2015年04月26日 17时35分25秒
+ * Version: 1.0  04/26/2015 17:35:25 PM
  *
  * Authors:
  *     Qianyi.lh (liuhuan), qianyi.lh@alibaba-inc.com

@@ -5,7 +5,7 @@
  * it under the terms of the GNU General Public License version 2 as
  * published by the Free Software Foundation.
  *
- * Atomic_test.cc -- test class Atomic*
+ * Atomic_test.cc -- test class Atomic
  *
  * Version: 1.0  04/26/2015 02:23:56 PM
  *

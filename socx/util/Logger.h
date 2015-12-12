@@ -17,6 +17,10 @@
 #ifndef SOCX_UTIL_LOGGER_H
 #define SOCX_UTIL_LOGGER_H
 
+// for errno, strerror
+#include <string.h>
+#include <errno.h>
+
 #include <glog/logging.h>
 
 #include "noncopyable.h"
@@ -37,7 +41,7 @@ private:
 
 public:
     /// 获得单例的 Logger 类对象的引用
-    static Logger &instance()
+    static inline Logger &instance()
     {
         // thread safe, see https://gcc.gnu.org/ml/gcc-patches/2004-08/msg01598.html
         static Logger logger;
