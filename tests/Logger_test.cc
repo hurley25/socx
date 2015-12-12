@@ -22,7 +22,7 @@ using namespace socx;
 
 TEST(TEST_LOG_TO_STDERR, ONLY_TEST)
 {
-    util::Logger &logger = util::Logger::GetInstance();
+    util::Logger &logger = util::Logger::instance();
  
     logger.setLogToStderr();
 
@@ -34,7 +34,7 @@ TEST(TEST_LOG_TO_STDERR, ONLY_TEST)
 
 TEST(TEST_SIGNAL_HANDLER, ONLY_TEST)
 {
-    util::Logger &logger = util::Logger::GetInstance();
+    util::Logger &logger = util::Logger::instance();
 
     logger.installFailureSignalHandler();
 

@@ -14,6 +14,7 @@
  *
  */
 
+#include <unistd.h>
 #include <iostream>
 #include <functional>
 #include <gtest/gtest.h>
@@ -39,6 +40,9 @@ TEST(TEST_THREADPOOL, ONLY_TEST)
     for (int i = 1; i <= 100; ++i) {
         pool.putTask(std::bind(test_task, i));
     }
+
+    // wait finish
+    sleep(1);
 
     pool.stop();
 

@@ -37,7 +37,7 @@ private:
 
 public:
     /// 获得单例的 Logger 类对象的引用
-    static Logger &GetInstance()
+    static Logger &instance()
     {
         // thread safe, see https://gcc.gnu.org/ml/gcc-patches/2004-08/msg01598.html
         static Logger logger;
