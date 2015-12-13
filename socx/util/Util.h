@@ -9,7 +9,7 @@
  *
  * Version: 1.0  04/26/2015 03:28:26 PM
  *
- * Authors:  
+ * Authors:
  *     Qianyi.lh (liuhuan), qianyi.lh@alibaba-inc.com
  *
  */
@@ -20,24 +20,20 @@
 namespace socx {
 namespace util {
 
-/**
- * 内存屏障
- */
+/// 内存屏障
 #if __GNUC__ < 4
 static inline void __memory_barrier(void)
 {
-    asm volatile("":::"memory"); 
+    asm volatile("":::"memory");
 }
 #else
 static inline void __memory_barrier(void)
-{ 
-    __sync_synchronize(); 
+{
+    __sync_synchronize();
 }
 #endif
 
-/**
- * 分支预测
- */
+// 分支预测
 #define likely(x)      __builtin_expect(!!(x), 1)
 #define unlikely(x)    __builtin_expect(!!(x), 0)
 

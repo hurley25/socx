@@ -14,8 +14,8 @@
  *
  */
 
-#ifndef SOCX_UTIL_TIMERFD_H_
-#define SOCX_UTIL_TIMERFD_H_
+#ifndef SOCX_UTIL_TIMERFD_H
+#define SOCX_UTIL_TIMERFD_H
 
 #include <sys/timerfd.h>
 
@@ -23,9 +23,13 @@
 
 namespace socx {
 
+/**
+ * timerfd 定时器的封装
+ */
 class TimerFd
 {
 public:
+    /// 构造函数默认创建非阻塞的 timerfd
     TimerFd(int fd_flags = TFD_NONBLOCK)
     {
        timer_fd_ = timerfd_create(CLOCK_REALTIME, fd_flags);
@@ -37,6 +41,7 @@ public:
         close(timer_fd_);
     }
 
+    /// 启动循环触发的毫秒级别定时器
     int startIntervalMSecTimer(long msec)
     {
         struct timespec tv;
@@ -58,11 +63,13 @@ public:
         return timerfd_settime(timer_fd_, TFD_TIMER_ABSTIME, &itv, NULL);
     }
 
+    /// 启动循环触发的秒级别定时器
     int startIntervalSecTimer(long sec)
     {
         return startIntervalMSecTimer(sec * 1000);
     }
 
+    /// 启动一次性的毫秒级别定时器
     int startOnceMSecTimer(long msec)
     {
         struct timespec tv;
@@ -73,7 +80,7 @@ public:
 
         struct itimerspec itv;
         bzero(&itv, sizeof(itv));
-        
+
         long sec = msec / 1000;
         long nsec = (msec % 1000) * 1000 * 1000;
 
@@ -83,11 +90,13 @@ public:
         return timerfd_settime(timer_fd_, TFD_TIMER_ABSTIME, &itv, NULL);
     }
 
+    /// 启动一次性的秒级别定时器
     int startOnceSecTimer(long sec)
     {
         return startOnceMSecTimer(sec * 1000);
     }
 
+    /// 启动一次性的绝对时间触发定时器
     int startAbsTimer(struct timespec &tv)
     {
         struct itimerspec itv;
@@ -97,6 +106,7 @@ public:
         return timerfd_settime(timer_fd_, TFD_TIMER_ABSTIME, &itv, NULL);
     }
 
+    /// 停止定时器时间（针对循环定时器）
     int stopTimer()
     {
         struct itimerspec itv;
@@ -104,6 +114,7 @@ public:
         return timerfd_settime(timer_fd_, TFD_TIMER_ABSTIME, &itv, NULL);
     }
 
+    /// 获得内部的 timerfd 文件描述符
     int fd() const
     {
         return timer_fd_;
@@ -115,4 +126,4 @@ private:
 
 } // namespace socx
 
-#endif // SOCX_UTIL_TIMERFD_H_
+#endif // SOCX_UTIL_TIMERFD_H

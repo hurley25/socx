@@ -9,13 +9,13 @@
  *
  * Version: 1.0  04/25/2015 06:20:25 PM
  *
- * Authors:  
+ * Authors:
  *     Qianyi.lh (liuhuan), qianyi.lh@alibaba-inc.com
  *
  */
 
-#ifndef SOCX_UTIL_NONCOPYABLE_H_
-#define SOCX_UTIL_NONCOPYABLE_H_
+#ifndef SOCX_UTIL_NONCOPYABLE_H
+#define SOCX_UTIL_NONCOPYABLE_H
 
 namespace socx {
 namespace util {
@@ -23,7 +23,7 @@ namespace util {
 /**
 * 私有继承该类的子类不允许赋值和拷贝(Singleton)
 */
-class noncopyable 
+class noncopyable
 {
 protected:
     noncopyable() {}

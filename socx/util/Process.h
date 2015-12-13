@@ -14,8 +14,8 @@
  *
  */
 
-#ifndef SOCX_UTIL_PROCESS_H_
-#define SOCX_UTIL_PROCESS_H_
+#ifndef SOCX_UTIL_PROCESS_H
+#define SOCX_UTIL_PROCESS_H
 
 #include <unistd.h>
 #include <linux/limits.h>
@@ -26,6 +26,9 @@
 
 namespace socx {
 
+/**
+ * 进程相关信息获取
+ */
 class Process
 {
 public:
@@ -41,7 +44,7 @@ public:
 
     static inline pid_t tid()
     {
-        return static_cast<pid_t>(::syscall(SYS_gettid));          
+        return static_cast<pid_t>(::syscall(SYS_gettid));
     }
 
     static inline uid_t uid()
@@ -49,6 +52,7 @@ public:
         return ::getuid();
     }
 
+    /// 获得当前进程启动时间
     static inline int getStartTime(std::string &stime)
     {
         char time_buff[20];
@@ -68,6 +72,7 @@ public:
         return 0;
     }
 
+    /// 获得当前进程的可执行文件路径
     static inline int getExeFilePath(std::string &path)
     {
         char path_buf[PATH_MAX];
@@ -84,4 +89,4 @@ public:
 
 } // namespace socx
 
-#endif  // SOCX_UTIL_PROCESS_H_
+#endif  // SOCX_UTIL_PROCESS_H
