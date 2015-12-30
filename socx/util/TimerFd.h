@@ -22,6 +22,7 @@
 #include "socx/util/Logger.h"
 
 namespace socx {
+namespace util {
 
 /**
  * timerfd 定时器的封装
@@ -124,6 +125,7 @@ private:
     int timer_fd_;
 };
 
+} // namespace util
 } // namespace socx
 
 #endif // SOCX_UTIL_TIMERFD_H

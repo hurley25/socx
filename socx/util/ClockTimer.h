@@ -21,6 +21,7 @@
 #include "socx/util/Logger.h"
 
 namespace socx {
+namespace util {
 
 /**
  * tsc/ns/us/ms 时间获取
@@ -60,6 +61,7 @@ public:
     }
 };
 
+} // namespace util
 } // namespace socx
 
 #endif  // SOCX_UTIL_CLOCKTIMER_H

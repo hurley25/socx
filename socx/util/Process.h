@@ -25,6 +25,7 @@
 #include <string>
 
 namespace socx {
+namespace util {
 
 /**
  * 进程相关信息获取
@@ -87,6 +88,7 @@ public:
 
 };
 
+} // namespace util
 } // namespace socx
 
 #endif  // SOCX_UTIL_PROCESS_H

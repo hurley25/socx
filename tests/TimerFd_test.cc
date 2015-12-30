@@ -20,7 +20,7 @@
 
 #include <time.h>
 
-using namespace socx;
+using namespace socx::util;
 
 TEST(TEST_TIMERFD, ONLY_TEST)
 {

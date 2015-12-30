@@ -18,7 +18,7 @@
 
 #include "socx/util/ClockTimer.h"
 
-using namespace socx;
+using namespace socx::util;
 
 TEST(TEST_CLOCKTIMER, ONLY_TEST)
 {

@@ -22,7 +22,7 @@
 
 #include "socx/util/Process.h"
 
-using namespace socx;
+using namespace socx::util;
 
 TEST(TEST_PROCESS, ONLY_TEST)
 {
