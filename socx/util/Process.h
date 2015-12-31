@@ -33,21 +33,25 @@ namespace util {
 class Process
 {
 public:
+    /// 获得当前进程的 pid
     static inline pid_t pid()
     {
         return ::getpid();
     }
 
+    /// 获得当前进程的 ppid
     static inline pid_t ppid()
     {
         return ::getppid();
     }
 
+    /// 获得当前进程的 tid
     static inline pid_t tid()
     {
         return static_cast<pid_t>(::syscall(SYS_gettid));
     }
 
+    /// 获得当前进程的 uid
     static inline uid_t uid()
     {
         return ::getuid();

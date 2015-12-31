@@ -29,6 +29,7 @@ namespace util {
 class ClockTimer
 {
 public:
+    /// rdtsc 指令读取 tsc 寄存器数值
     static inline uint64_t rdtsc()
     {
         uint64_t rdtsc;
@@ -36,6 +37,7 @@ public:
         return rdtsc;
     }
 
+    /// 取得当前时间的 ns 值
     static inline uint64_t nowNs()
     {
         struct timespec tv;
@@ -44,6 +46,7 @@ public:
         return (tv.tv_sec * (uint64_t)1000000000 + tv.tv_nsec);
     }
 
+    /// 取得当前时间的 us 值
     static inline uint64_t nowUs()
     {
         struct timespec tv;
@@ -52,6 +55,7 @@ public:
         return (tv.tv_sec * (uint64_t)1000000 + tv.tv_nsec / 1000);
     }
 
+    /// 取得当前时间的 ms 值
     static inline uint64_t nowMs()
     {
         struct timespec tv;

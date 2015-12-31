@@ -33,10 +33,12 @@ namespace util {
 class CountDownLatch : private noncopyable
 {
 public:
+    /// 构造函
     explicit CountDownLatch(int count) : count_(count)
     {
     }
 
+    /// 等待所有任务线程完成
     void wait()
     {
         std::unique_lock<std::mutex> lock(mutex_);
@@ -46,6 +48,7 @@ public:
         }
     }
 
+    /// 任务线程完成后调用，用于减少等待线程数
     void countDown()
     {
         std::lock_guard<std::mutex> lock(mutex_);
@@ -56,6 +59,7 @@ public:
         }
     }
 
+    /// 当前未完成任务线程数
     int getCount() const
     {
         std::lock_guard<std::mutex> lock(mutex_);
