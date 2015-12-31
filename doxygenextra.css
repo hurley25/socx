@@ -65,6 +65,7 @@ div.toc li {
 }
 
 .title {
+	font-family: "Microsoft Yahei";
 	font-size: 2.5em;
 	line-height: 63.75px;
 	border-bottom: 1px solid #ddd;
@@ -87,6 +88,7 @@ div.toc li {
 }
 
 body h1 {
+	font-family: "Microsoft Yahei";
 	font-size: 2em;
 	line-height: 1.7;
 	border-bottom: 1px solid #eee;
@@ -96,6 +98,7 @@ body h1 {
 }
 
 body h2 {
+	font-family: "Microsoft Yahei";
 	font-size: 1.5em;
 	line-height: 1.7;
 	margin: 1em 0 15px;
@@ -112,16 +115,19 @@ pre.fragment {
 }
 
 table.doxtable th {
+	font-family: "Microsoft Yahei";
 	background-color: #f8f8f8;
 	color: #333333;
 	font-size: 15px;
 }
 
 table.doxtable td, table.doxtable th {
+	font-family: "Microsoft Yahei";
 	border: 1px solid #ddd;
 }
 
 #doc-content {
+	font-family: "Microsoft Yahei";
 	background-color: #fff;
 	width: 918px;
 	height: auto !important;
@@ -186,6 +192,7 @@ div.fragment {
 
 #side-nav
 {
+	font-family: "Microsoft Yahei";
 	padding: 10px 0px 20px 20px;
 	border-top: 60px solid #2980b9;
 	background-color: #343131;
@@ -196,6 +203,7 @@ div.fragment {
 
 #nav-tree
 {
+	font-family: "Microsoft Yahei";
 	background-color: transparent;
 	background-image: none;
 	height: 100% !important;
@@ -203,6 +211,7 @@ div.fragment {
 
 #nav-tree .label
 {
+	font-family: "Microsoft Yahei";
 	font-family: Helvetica, arial, freesans, clean, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
 	line-height: 25.5px;	
 	font-size: 15px;
@@ -210,15 +219,18 @@ div.fragment {
 
 #nav-tree
 {
+	font-family: "Microsoft Yahei";
 	color: #b3b3b3;
 }
 
 #nav-tree .selected {
+	font-family: "Microsoft Yahei";
 	background-image: none;
 }
 
 #nav-tree a
 {
+	font-family: "Microsoft Yahei";
 	color: #b3b3b3;
 }
 
