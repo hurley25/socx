@@ -20,6 +20,7 @@
 #include <sys/timerfd.h>
 
 #include "socx/util/Logger.h"
+#include "socx/util/noncopyable.h"
 
 namespace socx {
 namespace util {
@@ -27,7 +28,7 @@ namespace util {
 /**
  * timerfd 定时器的封装
  */
-class TimerFd
+class TimerFd : private noncopyable
 {
 public:
     /// 构造函数默认创建非阻塞的 timerfd
