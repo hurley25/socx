@@ -1,0 +1,207 @@
+<!-- HTML header for doxygen 1.8.7-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+        <meta name="generator" content="Doxygen 1.8.7"/>
+        <title>sock - A Library for Linux System Call</title>
+        <title>socx</title>
+        <link href="tabs.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="dynsections.js"></script>
+            <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+            <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+        <link href="doxygen.css" rel="stylesheet" type="text/css" />
+            <link href="doxygenextra.css" rel="stylesheet" type="text/css"/>
+    </head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="topbanner"><i class="githublogo"></i></div>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_atomic_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>函数</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Atomic.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * (C) 2007-2015 Alibaba Inc.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This program is free software; you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * it under the terms of the GNU General Public License version 2 as</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * published by the Free Software Foundation.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * Atomic.h -- atomic number</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * Version: 1.0  04/26/2015 02:09:53 PM</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * Authors:  </span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *     Qianyi.lh (liuhuan), qianyi.lh@alibaba-inc.com</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifndef SOCX_UTIL_ATOMIC_H</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define SOCX_UTIL_ATOMIC_H</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;socx/util/noncopyable.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span>socx {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>util {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * 原子整数</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classsocx_1_1util_1_1_atomic_int.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsocx_1_1util_1_1_atomic_int.html">AtomicInt</a> : <span class="keyword">private</span> <a class="code" href="classsocx_1_1util_1_1noncopyable.html">noncopyable</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classsocx_1_1util_1_1_atomic_int.html">AtomicInt</a>() : value_(0) { }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">    /// 获得原子变量的值</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classsocx_1_1util_1_1_atomic_int.html#a7bf06f515e939b3943825d59f471e7ff">   37</a></span>&#160;<span class="comment"></span>    T <span class="keyword">get</span>()</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">// in g++ &gt;= 4.7: __atomic_load_n(&amp;value_, __ATOMIC_SEQ_CST)</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> __sync_val_compare_and_swap(&amp;value_, 0, 0);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    /// 原子变量Add操作并后返原值</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classsocx_1_1util_1_1_atomic_int.html#a2684f10fcfa36cb7c487990138c9d6af">   44</a></span>&#160;<span class="comment"></span>    T <a class="code" href="classsocx_1_1util_1_1_atomic_int.html#a2684f10fcfa36cb7c487990138c9d6af">getAndAdd</a>(T x)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">return</span> __sync_fetch_and_add(&amp;value_, x);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">    /// 原子变量Add操作并返回Add后的值</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classsocx_1_1util_1_1_atomic_int.html#a3a5f2085009411c387b9fa9db7e22502">   50</a></span>&#160;<span class="comment"></span>    T <a class="code" href="classsocx_1_1util_1_1_atomic_int.html#a3a5f2085009411c387b9fa9db7e22502">addAndGet</a>(T x)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classsocx_1_1util_1_1_atomic_int.html#a2684f10fcfa36cb7c487990138c9d6af">getAndAdd</a>(x) + x;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">    /// 原子变量自增1并返回原值</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classsocx_1_1util_1_1_atomic_int.html#a06a5d134ce8020edf093af04836fe04b">   56</a></span>&#160;<span class="comment"></span>    T <a class="code" href="classsocx_1_1util_1_1_atomic_int.html#a06a5d134ce8020edf093af04836fe04b">incrementAndGet</a>()</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classsocx_1_1util_1_1_atomic_int.html#a3a5f2085009411c387b9fa9db7e22502">addAndGet</a>(1);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">    /// 原子变量自减1并返回原值</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classsocx_1_1util_1_1_atomic_int.html#a08a31f3f25a8c6739cf26c879e8bc1ba">   62</a></span>&#160;<span class="comment"></span>    T <a class="code" href="classsocx_1_1util_1_1_atomic_int.html#a08a31f3f25a8c6739cf26c879e8bc1ba">decrementAndGet</a>()</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classsocx_1_1util_1_1_atomic_int.html#a3a5f2085009411c387b9fa9db7e22502">addAndGet</a>(-1);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">    /// 原子变量Add</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classsocx_1_1util_1_1_atomic_int.html#adc602b91889b208ad8af553dfe407b31">   68</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classsocx_1_1util_1_1_atomic_int.html#adc602b91889b208ad8af553dfe407b31">add</a>(T x)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="classsocx_1_1util_1_1_atomic_int.html#a2684f10fcfa36cb7c487990138c9d6af">getAndAdd</a>(x);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">    /// 原子变量自增1</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classsocx_1_1util_1_1_atomic_int.html#af794a6943d0dc86221541003202c1c38">   74</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classsocx_1_1util_1_1_atomic_int.html#af794a6943d0dc86221541003202c1c38">increment</a>()</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="classsocx_1_1util_1_1_atomic_int.html#a06a5d134ce8020edf093af04836fe04b">incrementAndGet</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">    /// 原子变量自减1</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classsocx_1_1util_1_1_atomic_int.html#adb5a7ea67f2b440da5220b8ca83a0d51">   80</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classsocx_1_1util_1_1_atomic_int.html#adb5a7ea67f2b440da5220b8ca83a0d51">decrement</a>()</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="classsocx_1_1util_1_1_atomic_int.html#a08a31f3f25a8c6739cf26c879e8bc1ba">decrementAndGet</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">    /// 原子变量设置为新值并返回旧值</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classsocx_1_1util_1_1_atomic_int.html#a80c220ffefcd5aab548ed5058b928dc4">   86</a></span>&#160;<span class="comment"></span>    T <a class="code" href="classsocx_1_1util_1_1_atomic_int.html#a80c220ffefcd5aab548ed5058b928dc4">getAndSet</a>(T newValue)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> __sync_lock_test_and_set(&amp;value_, newValue);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">volatile</span> T value_;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">typedef</span> AtomicInt&lt;int32_t&gt; AtomicInt32;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">typedef</span> AtomicInt&lt;int64_t&gt; AtomicInt64;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;} <span class="comment">// namespace util</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;} <span class="comment">// namespace socx</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif  // SOCX_UTIL_ATOMIC_H</span></div>
+<div class="ttc" id="classsocx_1_1util_1_1noncopyable_html"><div class="ttname"><a href="classsocx_1_1util_1_1noncopyable.html">socx::util::noncopyable</a></div><div class="ttdef"><b>Definition:</b> noncopyable.h:26</div></div>
+<div class="ttc" id="classsocx_1_1util_1_1_atomic_int_html_a3a5f2085009411c387b9fa9db7e22502"><div class="ttname"><a href="classsocx_1_1util_1_1_atomic_int.html#a3a5f2085009411c387b9fa9db7e22502">socx::util::AtomicInt::addAndGet</a></div><div class="ttdeci">T addAndGet(T x)</div><div class="ttdoc">原子变量Add操作并返回Add后的值 </div><div class="ttdef"><b>Definition:</b> Atomic.h:50</div></div>
+<div class="ttc" id="classsocx_1_1util_1_1_atomic_int_html"><div class="ttname"><a href="classsocx_1_1util_1_1_atomic_int.html">socx::util::AtomicInt</a></div><div class="ttdef"><b>Definition:</b> Atomic.h:31</div></div>
+<div class="ttc" id="classsocx_1_1util_1_1_atomic_int_html_adb5a7ea67f2b440da5220b8ca83a0d51"><div class="ttname"><a href="classsocx_1_1util_1_1_atomic_int.html#adb5a7ea67f2b440da5220b8ca83a0d51">socx::util::AtomicInt::decrement</a></div><div class="ttdeci">void decrement()</div><div class="ttdoc">原子变量自减1 </div><div class="ttdef"><b>Definition:</b> Atomic.h:80</div></div>
+<div class="ttc" id="classsocx_1_1util_1_1_atomic_int_html_a08a31f3f25a8c6739cf26c879e8bc1ba"><div class="ttname"><a href="classsocx_1_1util_1_1_atomic_int.html#a08a31f3f25a8c6739cf26c879e8bc1ba">socx::util::AtomicInt::decrementAndGet</a></div><div class="ttdeci">T decrementAndGet()</div><div class="ttdoc">原子变量自减1并返回原值 </div><div class="ttdef"><b>Definition:</b> Atomic.h:62</div></div>
+<div class="ttc" id="classsocx_1_1util_1_1_atomic_int_html_af794a6943d0dc86221541003202c1c38"><div class="ttname"><a href="classsocx_1_1util_1_1_atomic_int.html#af794a6943d0dc86221541003202c1c38">socx::util::AtomicInt::increment</a></div><div class="ttdeci">void increment()</div><div class="ttdoc">原子变量自增1 </div><div class="ttdef"><b>Definition:</b> Atomic.h:74</div></div>
+<div class="ttc" id="classsocx_1_1util_1_1_atomic_int_html_adc602b91889b208ad8af553dfe407b31"><div class="ttname"><a href="classsocx_1_1util_1_1_atomic_int.html#adc602b91889b208ad8af553dfe407b31">socx::util::AtomicInt::add</a></div><div class="ttdeci">void add(T x)</div><div class="ttdoc">原子变量Add </div><div class="ttdef"><b>Definition:</b> Atomic.h:68</div></div>
+<div class="ttc" id="classsocx_1_1util_1_1_atomic_int_html_a2684f10fcfa36cb7c487990138c9d6af"><div class="ttname"><a href="classsocx_1_1util_1_1_atomic_int.html#a2684f10fcfa36cb7c487990138c9d6af">socx::util::AtomicInt::getAndAdd</a></div><div class="ttdeci">T getAndAdd(T x)</div><div class="ttdoc">原子变量Add操作并后返原值 </div><div class="ttdef"><b>Definition:</b> Atomic.h:44</div></div>
+<div class="ttc" id="classsocx_1_1util_1_1_atomic_int_html_a80c220ffefcd5aab548ed5058b928dc4"><div class="ttname"><a href="classsocx_1_1util_1_1_atomic_int.html#a80c220ffefcd5aab548ed5058b928dc4">socx::util::AtomicInt::getAndSet</a></div><div class="ttdeci">T getAndSet(T newValue)</div><div class="ttdoc">原子变量设置为新值并返回旧值 </div><div class="ttdef"><b>Definition:</b> Atomic.h:86</div></div>
+<div class="ttc" id="classsocx_1_1util_1_1_atomic_int_html_a06a5d134ce8020edf093af04836fe04b"><div class="ttname"><a href="classsocx_1_1util_1_1_atomic_int.html#a06a5d134ce8020edf093af04836fe04b">socx::util::AtomicInt::incrementAndGet</a></div><div class="ttdeci">T incrementAndGet()</div><div class="ttdoc">原子变量自增1并返回原值 </div><div class="ttdef"><b>Definition:</b> Atomic.h:56</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.7-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e16555fb1439476258d594a3575ab894.html">socx</a></li><li class="navelem"><a class="el" href="dir_5efff3ef8b204302bac611d7728d7213.html">util</a></li><li class="navelem"><b>Atomic.h</b></li>
+  </ul>
+</div>
+<script type="text/javascript">
+</script>
+</body>
+</html>

@@ -59,7 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('classsocx_1_1util_1_1_logger.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -77,17 +77,56 @@ $(document).ready(function(){initNavTree('index.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="classsocx_1_1util_1_1_logger-members.html">所有成员列表</a>  </div>
   <div class="headertitle">
-<div class="title">socx 文档</div>  </div>
+<div class="title">socx::util::Logger类 参考</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>A Library for Linux System Call. </p>
-</div></div><!-- contents -->
+
+<p><code>#include &lt;<a class="el" href="_logger_8h_source.html">Logger.h</a>&gt;</code></p>
+<div class="dynheader">
+类 socx::util::Logger 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classsocx_1_1util_1_1_logger.png" usemap="#socx::util::Logger_map" alt=""/>
+  <map id="socx::util::Logger_map" name="socx::util::Logger_map">
+<area href="classsocx_1_1util_1_1noncopyable.html" alt="socx::util::noncopyable" shape="rect" coords="0,0,139,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a44a53a3e45d5d6c9ba03d132ab551942"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44a53a3e45d5d6c9ba03d132ab551942"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocx_1_1util_1_1_logger.html#a44a53a3e45d5d6c9ba03d132ab551942">setLogToStderr</a> ()</td></tr>
+<tr class="memdesc:a44a53a3e45d5d6c9ba03d132ab551942"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置日志输出到 stderr (默认输出到文件) <br /></td></tr>
+<tr class="separator:a44a53a3e45d5d6c9ba03d132ab551942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2598f002c1050f5f089c1df64dc1d90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2598f002c1050f5f089c1df64dc1d90"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocx_1_1util_1_1_logger.html#ac2598f002c1050f5f089c1df64dc1d90">installFailureSignalHandler</a> ()</td></tr>
+<tr class="memdesc:ac2598f002c1050f5f089c1df64dc1d90"><td class="mdescLeft">&#160;</td><td class="mdescRight">安装信号处理器 (程序遇到 SIGSEGV 之类的信号结束时将显示更多信息) <br /></td></tr>
+<tr class="separator:ac2598f002c1050f5f089c1df64dc1d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ac89b05e6942edaab0c9ec0c3acc950dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac89b05e6942edaab0c9ec0c3acc950dd"></a>
+static <a class="el" href="classsocx_1_1util_1_1_logger.html">Logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocx_1_1util_1_1_logger.html#ac89b05e6942edaab0c9ec0c3acc950dd">instance</a> ()</td></tr>
+<tr class="memdesc:ac89b05e6942edaab0c9ec0c3acc950dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">获得单例的 <a class="el" href="classsocx_1_1util_1_1_logger.html">Logger</a> 类对象的引用 <br /></td></tr>
+<tr class="separator:ac89b05e6942edaab0c9ec0c3acc950dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>日志定制 </p>
+</div><hr/>该类的文档由以下文件生成:<ul>
+<li>socx/util/<a class="el" href="_logger_8h_source.html">Logger.h</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><b>socx</b></li><li class="navelem"><b>util</b></li><li class="navelem"><a class="el" href="classsocx_1_1util_1_1_logger.html">Logger</a></li>
   </ul>
 </div>
 <script type="text/javascript">

@@ -59,7 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('classsocx_1_1util_1_1_count_down_latch.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -77,17 +77,56 @@ $(document).ready(function(){initNavTree('index.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classsocx_1_1util_1_1_count_down_latch-members.html">所有成员列表</a>  </div>
   <div class="headertitle">
-<div class="title">socx 文档</div>  </div>
+<div class="title">socx::util::CountDownLatch类 参考</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>A Library for Linux System Call. </p>
-</div></div><!-- contents -->
+
+<p><code>#include &lt;<a class="el" href="_count_down_latch_8h_source.html">CountDownLatch.h</a>&gt;</code></p>
+<div class="dynheader">
+类 socx::util::CountDownLatch 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classsocx_1_1util_1_1_count_down_latch.png" usemap="#socx::util::CountDownLatch_map" alt=""/>
+  <map id="socx::util::CountDownLatch_map" name="socx::util::CountDownLatch_map">
+<area href="classsocx_1_1util_1_1noncopyable.html" alt="socx::util::noncopyable" shape="rect" coords="0,0,162,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a8706e4958172f5d8621e41bcdf63a42d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8706e4958172f5d8621e41bcdf63a42d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocx_1_1util_1_1_count_down_latch.html#a8706e4958172f5d8621e41bcdf63a42d">CountDownLatch</a> (int count)</td></tr>
+<tr class="memdesc:a8706e4958172f5d8621e41bcdf63a42d"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函 <br /></td></tr>
+<tr class="separator:a8706e4958172f5d8621e41bcdf63a42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91e33021ccfd803a25dfd2782f6d5597"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91e33021ccfd803a25dfd2782f6d5597"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocx_1_1util_1_1_count_down_latch.html#a91e33021ccfd803a25dfd2782f6d5597">wait</a> ()</td></tr>
+<tr class="memdesc:a91e33021ccfd803a25dfd2782f6d5597"><td class="mdescLeft">&#160;</td><td class="mdescRight">等待所有任务线程完成 <br /></td></tr>
+<tr class="separator:a91e33021ccfd803a25dfd2782f6d5597"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3a7fd6eb577a0fee011fd8ff44d854d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3a7fd6eb577a0fee011fd8ff44d854d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocx_1_1util_1_1_count_down_latch.html#ad3a7fd6eb577a0fee011fd8ff44d854d">countDown</a> ()</td></tr>
+<tr class="memdesc:ad3a7fd6eb577a0fee011fd8ff44d854d"><td class="mdescLeft">&#160;</td><td class="mdescRight">任务线程完成后调用，用于减少等待线程数 <br /></td></tr>
+<tr class="separator:ad3a7fd6eb577a0fee011fd8ff44d854d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad32899bc36c23c63f46fb0facaede124"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad32899bc36c23c63f46fb0facaede124"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocx_1_1util_1_1_count_down_latch.html#ad32899bc36c23c63f46fb0facaede124">getCount</a> () const </td></tr>
+<tr class="memdesc:ad32899bc36c23c63f46fb0facaede124"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前未完成任务线程数 <br /></td></tr>
+<tr class="separator:ad32899bc36c23c63f46fb0facaede124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>倒计时门闩同步 </p>
+</div><hr/>该类的文档由以下文件生成:<ul>
+<li>socx/util/<a class="el" href="_count_down_latch_8h_source.html">CountDownLatch.h</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><b>socx</b></li><li class="navelem"><b>util</b></li><li class="navelem"><a class="el" href="classsocx_1_1util_1_1_count_down_latch.html">CountDownLatch</a></li>
   </ul>
 </div>
 <script type="text/javascript">
