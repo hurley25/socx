@@ -10,6 +10,7 @@ SET (TEST_SRCS
     ClockTimer_test.cc
     TimerFd_test.cc
     Process_test.cc
+    NumberUtil_test.cc
 )
 
 ADD_EXECUTABLE (all_test ${TEST_SRCS})
