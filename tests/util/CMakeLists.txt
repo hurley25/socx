@@ -7,7 +7,7 @@ SET (TEST_SRCS
     BlockingQueue_test.cc
     ThreadPool_test.cc
     CountDownLatch_test.cc
-    ClockTimer_test.cc
+    ClockTime_test.cc
     TimerFd_test.cc
     Process_test.cc
     NumberUtil_test.cc

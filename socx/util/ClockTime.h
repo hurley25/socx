@@ -5,7 +5,7 @@
  * it under the terms of the GNU General Public License version 2 as
  * published by the Free Software Foundation.
  *
- * ClockTimer.hpp -- ClockTimer
+ * ClockTime.hpp -- ClockTime
  *
  * Version: 1.0  12/12/2015 12:37:26 PM
  *
@@ -13,8 +13,8 @@
  *     Qianyi.lh (liuhuan), qianyi.lh@alibaba-inc.com
  *
  */
-#ifndef SOCX_UTIL_CLOCKTIMER_H
-#define SOCX_UTIL_CLOCKTIMER_H
+#ifndef SOCX_UTIL_CLOCKTIME_H
+#define SOCX_UTIL_CLOCKTIME_H
 
 #include <time.h>
 
@@ -26,7 +26,7 @@ namespace util {
 /**
  * tsc/ns/us/ms 时间获取
  */
-class ClockTimer
+class ClockTime
 {
 public:
     /// rdtsc 指令读取 tsc 寄存器数值
@@ -68,4 +68,4 @@ public:
 } // namespace util
 } // namespace socx
 
-#endif  // SOCX_UTIL_CLOCKTIMER_H
+#endif  // SOCX_UTIL_CLOCKTIME_H
