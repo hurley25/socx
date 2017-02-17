@@ -24,7 +24,7 @@ namespace util {
 #if __GNUC__ < 4
 static inline void __memory_barrier(void)
 {
-    asm volatile("":::"memory");
+    asm volatile("mfence":::"memory");
 }
 #else
 static inline void __memory_barrier(void)
